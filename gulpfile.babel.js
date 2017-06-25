@@ -248,7 +248,6 @@ return swPrecache.write(filepath, {
     `${rootDir}/images/**/*`,
     `${rootDir}/scripts/**/*.js`,
     `${rootDir}/styles/**/*.css`,
-    `${rootDir}/others/*.pdf`,
     `${rootDir}/*.{html,json}`
   ],
   // Translates a static file path to the relative URL that it's served from.
