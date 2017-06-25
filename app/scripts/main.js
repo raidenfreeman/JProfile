@@ -100,6 +100,49 @@
     };
   }
 
+  function animate(duration, draw, timing) {
+
+    var start = performance.now();
+
+    requestAnimationFrame(function animate(time) {
+      var timeFraction = (time - start) / duration;
+      if (timeFraction > 1) timeFraction = 1;
+
+      var progress = timing(timeFraction);
+
+      draw(progress);
+
+      if (timeFraction < 1) {
+        requestAnimationFrame(animate);
+      }
+
+    });
+  }
+
+  // accepts a timing function, returns the transformed variant
+  function makeEaseOut(timing) {
+    return function(timeFraction) {
+      return 1 - timing(1 - timeFraction);
+    }
+  }
+
+  function quintEaseIn(progress) {
+    return Math.pow(progress, 8);
+  }
+
+  var quintEaseOut = makeEaseOut(quintEaseIn);
+
+  var g = document.getElementById('g');
+  animate(
+    10000,
+    quintEaseOut,
+    // function (timeFraction) {
+    //   return timeFraction;
+    // },
+    function (progress) {
+      g.innerHTML = Math.round(progress * 450);
+    }
+  );
 })();
 
 (function () {
