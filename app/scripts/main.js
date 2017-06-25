@@ -127,7 +127,7 @@
   }
 
   function quintEaseIn(progress) {
-    return Math.pow(progress, 8);
+    return Math.pow(progress, 5);
   }
 
   var quintEaseOut = makeEaseOut(quintEaseIn);
