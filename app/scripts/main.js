@@ -3,7 +3,7 @@
  */
 (function () {
 
-  var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
+  var width, height, canvas, ctx, circles, target, animateHeader = true;
 
   // Main
   initHeader();
@@ -66,6 +66,7 @@
       }
     }
     requestAnimationFrame(animate);
+    //
   }
 
   // Canvas manipulation
@@ -100,17 +101,19 @@
     };
   }
 
-  function animate(duration, draw, timing) {
+  function animateText(duration, timing, draw) {
 
     var start = performance.now();
 
     requestAnimationFrame(function animate(time) {
+      // timeFraction goes from 0 to 1
       var timeFraction = (time - start) / duration;
       if (timeFraction > 1) timeFraction = 1;
 
+      // calculate the current animation state
       var progress = timing(timeFraction);
 
-      draw(progress);
+      draw(progress); // draw it
 
       if (timeFraction < 1) {
         requestAnimationFrame(animate);
@@ -119,30 +122,17 @@
     });
   }
 
-  // accepts a timing function, returns the transformed variant
-  function makeEaseOut(timing) {
-    return function(timeFraction) {
-      return 1 - timing(1 - timeFraction);
-    }
+  function animateElement(duration, element) {
+    animateText(duration, function (timeFraction) {
+        //return Math.pow(timeFraction, 2);
+        var value = 1 - Math.pow(1 - timeFraction, 4);
+        return value > 0 ? value : 0;
+      }, function (progress) {
+        element.innerHTML = Math.round(progress * 10);
+      }
+    );
   }
-
-  function quintEaseIn(progress) {
-    return Math.pow(progress, 5);
-  }
-
-  var quintEaseOut = makeEaseOut(quintEaseIn);
-
-  var g = document.getElementById('g');
-  animate(
-    10000,
-    quintEaseOut,
-    // function (timeFraction) {
-    //   return timeFraction;
-    // },
-    function (progress) {
-      g.innerHTML = Math.round(progress * 450);
-    }
-  );
+  //animateElement(1500, document.getElementById('h'));
 })();
 
 (function () {
