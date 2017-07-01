@@ -28,7 +28,7 @@ body {
   width: 100%;
   height: 110vh;
   background-size: cover;
-  background: url('../images/bg.jpg') center bottom;
+  background: url('../images/bg.jpg') fixed center bottom;
   box-shadow: 20px 6px 13px 20px rgb(33, 31, 39);
   border-bottom-left-radius: 79% 33%;
   border-bottom-right-radius: 79% 33%;
@@ -145,15 +145,34 @@ hr.fading-hr {
 
 #personal-description {
   word-spacing: 0.4em;
+  /*margin-bottom: 2em;*/
 }
 
 #personal-description > a {
   color: blanchedalmond;
 }
 
-.button {
+.external-links{
+  margin: 3em 20% 0 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.external-links>.button {
+  border-radius: 10px;
   border: 3px solid;
   color: blanchedalmond;
+  background-color: transparent;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.external-links>.button:hover{
+  color: slategrey;
+  background-color: blanchedalmond;
+  border-color: transparent;
+
 }
 
 #profileImage {
@@ -226,28 +245,6 @@ hr.fading-hr {
   font-family: Raleway, Helvetica, sans-serif;
   font-size: 1em;
 }
-
-/*#journals {*/
-/*margin: auto 20%;*/
-/*}*/
-
-/*@media screen and (max-width: 320px) {*/
-/*#journals {*/
-/*margin: auto 0;*/
-/*}*/
-/*}*/
-
-/*@media screen and (max-width: 720px) and (min-width: 320px) {*/
-/*#journals {*/
-/*margin: auto 0;*/
-/*}*/
-/*}*/
-
-/*@media screen and (min-width: 720px) {*/
-/*#journals {*/
-/*margin: auto 10%;*/
-/*}*/
-/*}*/
 
 .main-title .thin {
   font-weight: 200;
@@ -413,6 +410,8 @@ a {
 a:hover, a:focus {
   color: #34495e;
 }
+
+
 
 .icon {
   font-family: 'Stroke-Gap-Icons';
