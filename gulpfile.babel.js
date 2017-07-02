@@ -65,7 +65,7 @@ gulp.task('deploy', ['default'], () => {
 gulp.task('copy', () =>
 gulp.src([
   'app/*',
-  'app/others/*',
+  'app/**/*',
   '!app/*.html',
   'node_modules/apache-server-configs/dist/.htaccess'
 ], {
@@ -116,8 +116,8 @@ gulp.src([
   // Note: Since we are not using useref in the scripts build pipeline,
   //       you need to explicitly list your scripts here in the right order
   //       to be correctly concatenated
-  './app/scripts/main.js'
-  // Other scripts
+  './app/scripts/main.js',
+  '.app/scripts/noframework.waypoints.min.js'
 ])
   .pipe($.newer('.tmp/scripts'))
   .pipe($.sourcemaps.init())
