@@ -15,13 +15,14 @@ body {
   font-family: Raleway, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
   margin: 0;
   color: white;
+  overflow-x: hidden;
 }
 
 .flex-container {
   display: flex;
 }
 
-.large-header.flex-container{
+.large-header.flex-container {
   align-items: center;
   justify-content: center;
   position: relative;
@@ -32,36 +33,38 @@ body {
   box-shadow: 20px 6px 13px 20px rgb(33, 31, 39);
   border-bottom-left-radius: 79% 33%;
   border-bottom-right-radius: 79% 33%;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
-.large-header.flex-container>#particle-canvas{
+.large-header.flex-container > #particle-canvas {
   position: absolute;
   margin: 0;
 }
 
 .main-title {
+  overflow: hidden;
   font-family: 'Clicker Script', cursive;
   font-weight: normal;
   font-size: 8em;
+  text-align: center;
   color: #f9f1e9;
   margin-bottom: 10vh;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
-.main-title.flex-container{
+.main-title.flex-container {
   align-items: center;
   justify-content: center;
 }
 
-#translated-origin {
+#spinSVG {
   position: absolute;
   margin: auto;
   width: 30vw;
   height: 30vw;
   min-width: 5em;
   min-height: 5em;
-  background: url(../images/deco.svg) no-repeat center center;
+  background: url('../images/deco.svg') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
   animation: antiClockwiseSpin 100s infinite linear;
@@ -152,13 +155,19 @@ hr.fading-hr {
   color: blanchedalmond;
 }
 
-.external-links{
-  margin: 3em 20% 0 20%;
+.external-links {
+  margin: 0;
   display: flex;
   justify-content: space-around;
 }
 
-.external-links>.button {
+@media screen and (min-width: 1080px) {
+  .external-links {
+    margin: 3em 20% 0 20%;
+  }
+}
+
+.external-links > .button {
   border-radius: 10px;
   border: 3px solid;
   color: blanchedalmond;
@@ -168,7 +177,7 @@ hr.fading-hr {
   text-align: center;
 }
 
-.external-links>.button:hover{
+.external-links > .button:hover {
   color: slategrey;
   background-color: blanchedalmond;
   border-color: transparent;
@@ -313,8 +322,8 @@ h2 {
   font-family: "Leckerli One", serif;
   font-size: 3em;
   /*color: #1c7bdf;*/
-  color:#f9f1e9;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+  color: #f9f1e9;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   /*text-shadow: 0 1px 0 #489fdf, 0 2px 0 #1b242b, 0 3px 0 #336c96, 0 4px 0 #bfe1f1, 0 5px 0 #e0ffff, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);*/
 }
 
@@ -360,21 +369,11 @@ h2 {
   body {
     font-size: 0.5em;
   }
-
-  #spinSVG {
-    width: 5em;
-    height: 5em;
-  }
 }
 
 @media screen and (max-width: 720px) and (min-width: 320px) {
   body {
     font-size: 0.8em;
-  }
-
-  #spinSVG {
-    width: 3em;
-    height: 3em;
   }
 
   .rounded-button {
@@ -412,37 +411,41 @@ a:hover, a:focus {
   color: #34495e;
 }
 
-
-.awards{
-  color: blanchedalmond;
-  background: url('../images/notes-macbook-study-conference.jpg') fixed center bottom;
+.awards {
+  color: #383a3c;
+  /*color: blanchedalmond;*/
+  /*background: url('../images/green-chameleon-21532.jpg') fixed center bottom;*/
+  background: url('../images/dai-ke-32162.jpg') fixed center bottom;
   background-size: cover;
   height: 35vh;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  font-weight: bolder;
 }
 
-.stats-container:first-of-type{
+.stats-container:first-of-type {
   border-right: 1px solid;
   padding-right: 10%;
 }
-.stats-container:last-of-type{
+
+.stats-container:last-of-type {
   padding-left: 10%;
 }
 
-.stats-container{
+.stats-container {
   font-size: 4em;
   text-align: center;
   margin: auto 0 auto 0;
   display: flex;
 }
 
-.stats-wrapper{
+.stats-wrapper {
   display: inline-block;
 }
-.stats-wrapper>p{
+
+.stats-wrapper > p {
   padding-left: 1em;
   line-height: 1.5em;
   vertical-align: middle;
@@ -451,7 +454,7 @@ a:hover, a:focus {
   margin: 0;
 }
 
-p.stats-text{
+p.stats-text {
   line-height: 1.2em;
   font-size: 0.4em;
 }
