@@ -66,6 +66,8 @@ gulp.task('copy', () =>
 gulp.src([
   'app/*',
   'app/**/*',
+  '!app/pdfs/**',
+  '!app/ignoreMe/**',
   '!app/*.html',
   'node_modules/apache-server-configs/dist/.htaccess'
 ], {
