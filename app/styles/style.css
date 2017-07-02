@@ -12,7 +12,7 @@ body {
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.25;
-  font-family: Raleway, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
   margin: 0;
   color: white;
 }
@@ -278,7 +278,7 @@ hr.fading-hr {
   background-color: #1D9D73;
   word-spacing: 0.5em;
   height: 2em;
-  font-family: Raleway, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 1em;
 }
 
@@ -309,6 +309,13 @@ hr.fading-hr {
 
 #theses ul li div{
   padding: 2em 0;
+}
+
+#theses ul li div em{
+  display: block;
+  margin: 0.5em 0;
+  font-size: 1.2em;
+  color: #f9f1e9;
 }
 
 #theses ul li a{
@@ -472,34 +479,45 @@ a {
 }
 
 .awards {
-  padding: 15vh 0;
+  min-height: 25em;
+  padding: 3em 0;
   color: #383a3c;
   /*color: blanchedalmond;*/
   /*background: url('../images/green-chameleon-21532.jpg') fixed center bottom;*/
   background: url('../images/dai-ke-32162.jpg') fixed center bottom;
   background-size: cover;
-  /*height: 35vh;*/
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   font-weight: bolder;
 }
 
-.stats-container:first-of-type {
-  border-right: 1px solid;
-  padding-right: 10%;
+@media screen and (min-width: 1080px) {
+  .awards{
+    flex-direction: row;
+  }
+  .stats-container:first-of-type {
+    border-right: 1px solid;
+    padding-right: 10%;
+  }
 }
 
-.stats-container:last-of-type {
-  padding-left: 10%;
+
+@media screen and (min-width: 1080px) {
+  .stats-container:last-of-type {
+    padding-left: 10%;
+  }
 }
+
 
 .stats-container {
   font-size: 4em;
   text-align: center;
   margin: auto 0 auto 0;
   display: flex;
+  justify-content: center;
 }
 
 .stats-wrapper {

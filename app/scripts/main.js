@@ -47,10 +47,13 @@
 
   function resize() {
     calculateHeightWidth();
+    console.log("clear");
     // largeHeader.style.height = height + 'px';
     canvas.width = width;
     canvas.height = height;
   }
+
+
 
   function calculateHeightWidth() {
     var largeHeader = document.getElementById("large-header");
@@ -85,7 +88,7 @@
       _this.pos.y = height + Math.random() * 100;
       _this.alpha = 0.1 + Math.random() * 0.3;
       _this.scale = 0.1 + Math.random() * 0.3;
-      _this.velocity = Math.random();
+      _this.velocity = Math.random()+0.2;
     }
 
     this.draw = function () {
@@ -93,7 +96,7 @@
         init();
       }
       _this.pos.y -= _this.velocity;
-      _this.alpha -= 0.0005;
+      _this.alpha -= 0.00035;
       ctx.beginPath();
       ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
       ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
@@ -454,12 +457,12 @@
 (function () {
 
   var w1 = document.getElementById('awards');
-  w1.innerHTML = "";
+  w1.innerHTML = "0";
   var w2 = document.getElementById('articles')
-  w2.innerHTML = "";
+  w2.innerHTML = "0";
 
   var waypoint = new Waypoint({
-    element: document.getElementById('awards'),
+    element: w1,
     handler: function () {
       animateElement(1500, w1); //TODO: UNCOMMENT THIS LINE
       animateElement(1500, w2); //TODO: UNCOMMENT THIS LINE
