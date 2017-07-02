@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 
   <!-- Disable tap highlight on IE -->
@@ -40,21 +40,23 @@
   <!--
   <link rel="canonical" href="http://www.example.com/">
   -->
-  <script src="192.168.1.107:8080/target/target-script-min.js#anonymous"></script>
 
 </head>
 <body>
-<div id="large-header" class="large-header flex-container">
-  <!--<canvas id="particle-canvas"></canvas>-->
-  <h1 class="main-title flex-container">
-    <div id="spinSVG">
-    </div>
-    Julia<br/>Markou
-  </h1>
+<div class="container hero-background">
+  <div id="large-header" class="large-header">
+    <canvas id="particle-canvas"></canvas>
+    <h1 class="main-title">
+      <div id="translated-origin">
+        <div id="rotating-svg"></div>
+      </div>
+      <div id="h">Julia<br/>Markou</div>
+    </h1>
+  </div>
 </div>
 
 <div class="content">
-  <hr class="fading-hr" id="bubble-spawn">
+  <!--<hr class="fading-hr" id="bubble-spawn">-->
   <div class="main-content">
     <div id="about" class="clearfix">
       <img id="profileImage" src="images/profilepic.jpg">
@@ -86,9 +88,9 @@
         applications. I am a member of the Hellenic Institute of Transportation Engineers (HITE).</p>
     </div>
   </div>
-  <hr class="fading-hr">
+  <!--<hr class="fading-hr">-->
   <div class="contact">
-    <h2>Contact me</h2>
+    <!--<h2>Contact me</h2>-->
     <div class="link-buttons">
       <a class="rounded-button" href="https://www.facebook.com/MarkouIoulia/"><span class="fa fa-fw fa-facebook"
                                                                                     aria-hidden="true"
@@ -98,8 +100,8 @@
       <a href="https://www.linkedin.com/in/iouliamarkou?trk=hp-identity-name/" class="rounded-button"><span
         class="fa fa-fw fa-linkedin"
         aria-hidden="true"></span></a>
-      <a href="#" class="rounded-button" id="mail"><span class="fa fa-fw fa-envelope" aria-hidden="true"></span></a>
       <a class="rounded-button" href="#" id="skype"><span class="fa fa-fw fa-skype" aria-hidden="true"></span></a>
+      <a href="#" class="rounded-button" id="mail"><span class="fa fa-fw fa-envelope" aria-hidden="true"></span></a>
     </div>
   </div>
 </div>
@@ -127,17 +129,22 @@
   <!--</div>-->
 </div>
 <div class="content">
-
   <div id="publications">
     <div id="theses">
       <ul>
-        <li>Markou I. Calibration of Traffic Simulation Models using SPSA. MS Thesis, School of Rural and Surveying
-          Engineering, NTUA, November 2014. <a href="finalthesisspsa.pdf" class="cl-effect-1"><span
+        <li>
+          <div>Markou I. <em>Calibration of Traffic Simulation Models using SPSA.</em> MS Thesis, School of Rural and Surveying
+            Engineering, NTUA, November 2014.
+          </div>
+          <a href="/pdfs/finalthesisspsa.pdf"><span
             class="fa fa-cloud-download "></span></a>
         </li>
-        <li>Markou I. Evaluation of pavement condition using Terrestrial Laser Scanning. Diploma Thesis, School of Rural
-          and Surveying Engineering, NTUA, September 2012. (in Greek) <a href="markou_pavement.pdf"
-                                                                         class="cl-effect-1"><span
+        <li>
+          <div>Markou I. <em>Evaluation of pavement condition using Terrestrial Laser Scanning.</em> Diploma Thesis, School of
+            Rural
+            and Surveying Engineering, NTUA, September 2012. (in Greek)
+          </div>
+          <a href="/pdfs/markou_pavement.pdf"><span
             class="fa fa-cloud-download "></span></a></li>
       </ul>
     </div>

@@ -6,8 +6,8 @@
   var width, height, canvas, ctx, circles, target, animateHeader = true;
 
   // Main
-  //initHeader();
-  //addListeners();
+  initHeader();
+  addListeners();
 
   function initHeader() {
     calculateHeightWidth();
