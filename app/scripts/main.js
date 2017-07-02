@@ -463,8 +463,8 @@
     handler: function () {
       animateElement(1500, w1); //TODO: UNCOMMENT THIS LINE
       animateElement(1500, w2); //TODO: UNCOMMENT THIS LINE
-      console.log("hellol");
-      // waypoint.destroy();
+      // console.log("hellol");
+      this.destroy();
     },
     offset: '80%'
   });

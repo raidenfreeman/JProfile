@@ -258,7 +258,6 @@ hr.fading-hr {
 
 #theses ul {
   list-style-type: none;
-  margin: auto 20%;
 }
 
 #theses ul li {
@@ -313,8 +312,10 @@ h2 {
   letter-spacing: 0.2em;
   font-family: "Leckerli One", serif;
   font-size: 3em;
-  color: #1c7bdf;
-  text-shadow: 0 1px 0 #489fdf, 0 2px 0 #1b242b, 0 3px 0 #336c96, 0 4px 0 #bfe1f1, 0 5px 0 #e0ffff, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  /*color: #1c7bdf;*/
+  color:#f9f1e9;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+  /*text-shadow: 0 1px 0 #489fdf, 0 2px 0 #1b242b, 0 3px 0 #336c96, 0 4px 0 #bfe1f1, 0 5px 0 #e0ffff, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);*/
 }
 
 .contact {
@@ -322,9 +323,9 @@ h2 {
   height: 25em;
   margin: 0 auto;
   text-align: center;
-  border-radius: 50%;
-  background-image: linear-gradient(to bottom right, #f1ffff, #70e6ff);
-  box-shadow: 7px 14px 12px 7px #211f27;
+  /*border-radius: 50%;*/
+  /*background-image: linear-gradient(to bottom right, #f1ffff, #70e6ff);*/
+  /*box-shadow: 7px 14px 12px 7px #211f27;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -332,8 +333,8 @@ h2 {
 
 .link-buttons {
   flex: 5;
-  margin-left: 20%;
-  margin-right: 20%;
+  /*margin-left: 20%;*/
+  /*margin-right: 20%;*/
   margin-bottom: 10%;
   max-width: 800px;
   display: flex;
@@ -352,7 +353,7 @@ h2 {
   box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: all ease-in-out 300ms;
-  flex: 1;
+  /*flex: 1;*/
 }
 
 @media screen and (max-width: 320px) {
@@ -412,8 +413,51 @@ a:hover, a:focus {
 }
 
 
+.awards{
+  color: blanchedalmond;
+  background: url('../images/notes-macbook-study-conference.jpg') fixed center bottom;
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.stats-container:first-of-type{
+  border-right: 1px solid;
+  padding-right: 10%;
+}
+.stats-container:last-of-type{
+  padding-left: 10%;
+}
+
+.stats-container{
+  font-size: 4em;
+  text-align: center;
+  margin: auto 0 auto 0;
+  display: flex;
+}
+
+.stats-wrapper{
+  display: inline-block;
+}
+.stats-wrapper>p{
+  padding-left: 1em;
+  line-height: 1.5em;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.75em;
+  margin: 0;
+}
+
+p.stats-text{
+  line-height: 1.2em;
+  font-size: 0.4em;
+}
 
 .icon {
+  padding-top: 0.5em;
   font-family: 'Stroke-Gap-Icons';
   font-weight: normal;
   font-style: normal;
