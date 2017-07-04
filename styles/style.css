@@ -31,6 +31,7 @@ body {
 
 .hero-background .large-header {
   background: url('../images/bg.jpg') fixed center bottom;
+  background-size: cover;
 }
 
 .main-content{
@@ -331,7 +332,7 @@ hr.fading-hr {
 #journals ol {
   font-style: italic;
   font-family: Georgia, Times, serif;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #bfe1f1;
 }
 
@@ -513,6 +514,7 @@ a {
 
 
 .stats-container {
+  text-shadow: -1px 0 blanchedalmond, 0 1px blanchedalmond, 1px 0 blanchedalmond, 0 -1px blanchedalmond;
   font-size: 4em;
   text-align: center;
   margin: auto 0 auto 0;
