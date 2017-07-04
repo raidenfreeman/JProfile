@@ -13,7 +13,7 @@
     calculateHeightWidth();
     target = {x: 0, y: height};
 
-    // largeHeader = document.getElementById('large-header');
+    // largeHeader = document.getElementById('largeHeader');
     // largeHeader.style.height = height + 'px';
 
     canvas = document.getElementById('particle-canvas');
@@ -54,9 +54,8 @@
   }
 
 
-
   function calculateHeightWidth() {
-    var largeHeader = document.getElementById("large-header");
+    var largeHeader = document.getElementById("largeHeader");
     width = largeHeader.clientWidth;
     height = largeHeader.clientHeight;
   }
@@ -88,7 +87,7 @@
       _this.pos.y = height + Math.random() * 100;
       _this.alpha = 0.1 + Math.random() * 0.3;
       _this.scale = 0.1 + Math.random() * 0.3;
-      _this.velocity = Math.random()+0.2;
+      _this.velocity = Math.random() + 0.2;
     }
 
     this.draw = function () {
@@ -103,7 +102,6 @@
       ctx.fill();
     };
   }
-
 })();
 
 (function () {
@@ -200,4 +198,21 @@
   }
 
 
+})();
+
+
+(function () {
+  //iOS doesn't support fixed backgrounds
+  var iOS = (/iPad|iPhone|iPod/.test(navigator.userAgent));
+  if (iOS) {
+    var inlineStyle = 'background-attachment: scroll;';
+    var awardsContainer = document.getElementById('awardsContainer');
+    var awardsStyle = awardsContainer.getAttribute('style');
+    awardsContainer.setAttribute('style',
+      awardsStyle === '' ? inlineStyle : awardsStyle + ';' + inlineStyle);
+    var largeHeader = document.getElementById('largeHeader');
+    var headerStyle = largeHeader.getAttribute('style');
+    largeHeader.setAttribute('style',
+      headerStyle === '' ? inlineStyle : headerStyle + ';' + inlineStyle);
+  }
 })();
