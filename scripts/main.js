@@ -205,7 +205,7 @@
   //iOS doesn't support fixed backgrounds
   var iOS = (/iPad|iPhone|iPod/.test(navigator.userAgent));
   if (iOS) {
-    var inlineStyle = 'background-attachment: scroll;';
+    var inlineStyle = 'background-attachment: initial;';
     var awardsContainer = document.getElementById('awardsContainer');
     var awardsStyle = awardsContainer.getAttribute('style');
     awardsContainer.setAttribute('style',
