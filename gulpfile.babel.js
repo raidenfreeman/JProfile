@@ -66,7 +66,6 @@ gulp.task('copy', () =>
 gulp.src([
   'app/*',
   'app/**/*',
-  '!app/pdfs/**',
   '!app/imagesUnoptimized/**',
   '!app/ignoreMe/**',
   '!app/*.html',

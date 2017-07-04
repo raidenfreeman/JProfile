@@ -31,11 +31,11 @@
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#1D9D73">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1d9d73">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#1d9d73">
 
   <link rel="stylesheet" href="styles/style.css">
   <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Leckerli+One|Roboto" rel="stylesheet">
@@ -49,7 +49,7 @@
 </head>
 <body>
 <div class="container hero-background">
-  <div id="large-header" class="large-header">
+  <div id="largeHeader" class="large-header">
     <canvas id="particle-canvas"></canvas>
     <h1 class="main-title">
       <div id="translated-origin">
@@ -70,7 +70,7 @@
         (ITS), calibration and optimization applications.</p>
       <div class="external-links">
         <a href="https://scholar.google.com/citations?user=zfYdx1AAAAAJ&hl" class="button">Google Scholar Profile</a>
-        <a href="others/markou_ioulia_cv1.pdf" class="button">C&nbsp;V</a>
+        <a href="/pdfs/markou_ioulia_cv1.pdf" class="button">C&nbsp;V</a>
       </div>
     </div>
   </div>
@@ -89,7 +89,7 @@
     </div>
   </div>
 </div>
-<div class="awards">
+<div class="awards" id="awardsContainer">
   <div class="stats-container">
     <i class="icon icon-Cup"></i>
     <div class="stats-wrapper">
@@ -110,18 +110,20 @@
     <div id="theses">
       <ul>
         <li>
-          <div>Markou I. <em>Calibration of Traffic Simulation Models using SPSA.</em> MS Thesis, School of Rural and Surveying
+          <div>Markou I. <em>Calibration of Traffic Simulation Models using SPSA.</em> MS Thesis, School of Rural and
+            Surveying
             Engineering, NTUA, November 2014.
           </div>
-          <a href="https://iouliamarkou.files.wordpress.com/2015/02/finalthesisspsa.pdf"><span
+          <a href="/pdfs/finalthesisspsa.pdf"><span
             class="fa fa-cloud-download "></span></a>
         </li>
         <li>
-          <div>Markou I. <em>Evaluation of pavement condition using Terrestrial Laser Scanning.</em> Diploma Thesis, School of
+          <div>Markou I. <em>Evaluation of pavement condition using Terrestrial Laser Scanning.</em> Diploma Thesis,
+            School of
             Rural
             and Surveying Engineering, NTUA, September 2012. (in Greek)
           </div>
-          <a href="https://iouliamarkou.files.wordpress.com/2015/02/markou_pavement.pdf"><span
+          <a href="/pdfs/markou_pavement.pdf"><span
             class="fa fa-cloud-download "></span></a></li>
       </ul>
     </div>
@@ -141,7 +143,8 @@
           dynamic multi-step prediction of traffic speed. Transportation Research Part C: Emerging Technologies, 68, pp.
           144-159.</p>
         </li>
-        <li><p><em><strong>Markou, I.</strong>, C. Antoniou, M. Tsakiri and A. Georgopoulos (2015).</em> “Applications of terrestrial
+        <li><p><em><strong>Markou, I.</strong>, C. Antoniou, M. Tsakiri and A. Georgopoulos (2015).</em> “Applications
+          of terrestrial
           laser
           scanning in
           transport”, Proceedings of the 7th International Congress on Transport Research in Greece, Hellenic Institute
@@ -154,8 +157,9 @@
           management of parking under constraints”, Proceedings of the 7th International Congress on Transport Research
           in
           Greece, Hellenic Institute of Transportation Engineers, Hellenic Institute of Transport, Athens, November
-          2015.
-          Papathanasopoulou, V., <strong>I. Markou</strong>, and C. Antoniou (2015). On-line calibration of
+          2015.</p></li>
+        <li><p><em>Papathanasopoulou, V., <strong>I. Markou</strong>, and C. Antoniou (2015).</em> On-line calibration
+          of
           car-following models
           exploiting
           input parameter correlation. 4th hEART Symposium (European Association for Research in Transportation –
@@ -163,19 +167,22 @@
           DTU,
           Denmark, 8-10 September, 2015.</p>
         </li>
-        <li><p><em><strong>Markou, I</strong>., V. Papathanasopoulou and C. Antoniou (2015).</em> A demonstration of distribution-based
+        <li><p><em><strong>Markou, I</strong>., V. Papathanasopoulou and C. Antoniou (2015).</em> A demonstration of
+          distribution-based
           calibration.
           Proceedings of the 4th International Conference on Models and Technologies for Intelligent Transportation
           Systems
           (MT-ITS), 3-5. June 2015. Budapest, Hungary.</p>
         </li>
-        <li><p><em><strong>Markou, I.</strong>, and C. Antoniou (2015).</em> Developing insight into effective SPSA parameters through
+        <li><p><em><strong>Markou, I.</strong>, and C. Antoniou (2015).</em> Developing insight into effective SPSA
+          parameters through
           sensitivity
           analysis.
           Proceedings of the 4th International Conference on Models and Technologies for Intelligent Transportation
           Systems
           (MT-ITS), 3-5. June 2015. Budapest, Hungary.</p>
         </li>
+
         <li><p><em>Antoniou, C., V. Gikas, V. Papathanasopoulou, C. Danezis, A. Panagopoulos, <strong>I. Markou</strong>,
           H. Perakis, D.
           Efthymiou
@@ -184,15 +191,8 @@
           absence of
           GNSS. Transportation Research Record: Journal of the Transportation Research Board (accepted).</p>
         </li>
-        <li><p><em>Antoniou, C., V. Gikas, V. Papathanasopoulou, C. Danezis, A. Panagopoulos, <strong>I. Markou</strong>,
-          H. Perakis, D.
-          Efthymiou
-          and
-          G. Yannis (2015).</em> Localization and driving behavior classification using smartphone sensors in the direct
-          absence of
-          GNSS. Proceedings of the 94th Annual Meeting of the Transportation Research Board, January 2015, Washington,
-          D.C.
-          Markou, I. and A. Georgopoulos (2014). Practical Assessment of 3D Reconstruction Methodologies. Proceedings of
+        <li><p><em><strong>Markou, I.</strong> and A. Georgopoulos (2014).</em>Practical Assessment of 3D Reconstruction
+          Methodologies. Proceedings of
           the
           International Conference on Cultural Heritage, November 2014, Lemessos, Cyprus.</p>
         </li>
@@ -211,6 +211,16 @@
           distribution-based
           calibration for traffic simulation. 17th International IEEE Conference on Intelligent Transportation Systems,
           Qingdao, China, October 8-11, 2014.</p>
+        </li>
+        <li><p><em>Antoniou, C., V. Gikas, V. Papathanasopoulou, C. Danezis, A. Panagopoulos, <strong>I. Markou</strong>,
+          H. Perakis, D.
+          Efthymiou
+          and
+          G. Yannis (2015).</em> Localization and driving behavior classification using smartphone sensors in the direct
+          absence of
+          GNSS. Proceedings of the 94th Annual Meeting of the Transportation Research Board, January 2015, Washington,
+          D.C.
+        </p>
         </li>
       </ol>
     </div>
