@@ -101,7 +101,7 @@ body {
 
 #largeHeader {
   /*display: none;*/
-  box-shadow: 20px 6px 13px 20px rgb(33, 31, 39);
+  /*box-shadow: 20px 6px 13px 20px rgb(33, 31, 39);*/
   border-bottom-left-radius: 79% 33%;
   border-bottom-right-radius: 79% 33%;
 }
@@ -494,6 +494,15 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   font-weight: bolder;
+  margin-bottom: 5em;
+}
+
+.skew{
+  transform: skewy(-3deg);
+}
+
+.unskew{
+  transform: skewy(3deg);
 }
 
 @media screen and (min-width: 1080px) {
