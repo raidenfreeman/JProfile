@@ -30,7 +30,7 @@ body {
 }
 
 .large-header {
-  background: url('../images/bg.jpg') fixed center bottom;
+  background: url('../images/bg.jpg');
   background-size: cover;
 }
 
